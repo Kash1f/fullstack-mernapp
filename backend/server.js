@@ -1,5 +1,5 @@
 import express from 'express'
-import { MongoClient } from 'mongodb'
+
 
 const app = express() //this is the same as saying createServer in normal nodejs
 
