@@ -5,12 +5,7 @@ function App() {
   
 
   return (
-   <BrowserRouter>
-   <Routes>
-    <Route path='/' element={<Layout/>}>
-      </Route>
-   </Routes>
-   </BrowserRouter>
+  <h1>Hello</h1>
   )
 }
 
