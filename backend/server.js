@@ -1,4 +1,7 @@
 import express from 'express'
+import dotenv from 'dotenv'
+
+dotenv.config();
 
 const app = express()
 
@@ -16,6 +19,10 @@ app.post('/api/products', (req, res) => {
     return res.status(400).json({ sucess: false, message: 'Please provide all the required fields' })
 }})
 
+console.log(process.env.MONGO_URI)
 
 
 
+app.listen(5000, () => {
+  console.log('Server is running on port 5000')
+})
