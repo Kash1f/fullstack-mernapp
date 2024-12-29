@@ -24,9 +24,10 @@ app.post("/api/products", async(req, res) => {
   const newProduct = new Product(product);
   try{
     await newProduct.save(); // save the product to the database
-    res.status(201).json({sucess: true, message: "Product added successfully"});
-  } catch(err){
-    res.status(500).json({sucess: false, message: "Internal server error"});
+    res.status(201).json({sucess: true, data : newProduct});
+  } catch(error){
+    console.log("Error in Creating new Product",error);
+    res.status(500).json({sucess: false, message: "Internal server error"}); // 500 Status code means internal server error
   }
 })
 
